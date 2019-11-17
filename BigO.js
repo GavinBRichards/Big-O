@@ -1,3 +1,8 @@
+// What is good code?
+//  1. Readable
+//  2. Scalable
+// Space and Time Complexity - Memory and Speed
+
 const nemo = ["nemo"];
 const everyone = [
   "dory",
@@ -22,6 +27,22 @@ function findNemo(array) {
 }
 
 findNemo(everyone); // O(n) --> Linear Time
+
+const findNemo2 = array => {
+  array.forEach(fish => {
+    if (fish === "nemo") {
+      console.log("found nemo");
+    }
+  });
+};
+
+const findNemo3 = array => {
+  for (let i of array) {
+    if (fish === "nemo") {
+      console.log("found nemo");
+    }
+  }
+};
 
 function effecientNemo(array) {
   for (let i = 0; i < array.length; i++) {
@@ -91,3 +112,44 @@ function logAllPairsOfArray(array) {
 }
 
 logAllPairsOfArray(boxes); // O(n^2) -- Quadratic Time
+
+// Space Complexity
+function booo(n) {
+  for (let i = 0; i < n.length; i++) {
+    console.log("boooo");
+  }
+}
+
+booo([1, 2, 3, 4, 5]); // O(1) only takes memory for i
+
+function arrayOfHiNTimes(n) {
+  let hiArray = [];
+  for (let i = 0; i < n; i++) {
+    hiArray[i] = "hi";
+  }
+  return hiArray;
+}
+
+arrayOfHiNTimes(6); // O(n) each item in array takes memory space
+
+const array = ["hi", "my", "bye"];
+array[0]; // O(1)
+array[array.length - 1]; // O(1)
+
+const array1 = [
+  {
+    tweet: hi,
+    date: 2012
+  },
+  {
+    tweet: my,
+    date: 2014
+  },
+  {
+    tweet: bye,
+    date: 2018
+  }
+];
+// O(n^2) --- nested loop
+
+"asdfasdfjaldfja".length; //O(1) --- depending on language and method this will vary
